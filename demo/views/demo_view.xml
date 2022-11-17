@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--FORM VIEW-->
+<!--    <record id="demo_form_view" model="ir.ui.view">-->
+<!--        <field name="name">Demo Form</field>-->
+<!--        <field name="model">demo.model</field>-->
+
+<!--        <field name="arch" type="xml">-->
+<!--            <form>-->
+<!--                <sheet>-->
+<!--                    <field name="name"/>-->
+<!--                    <field name="email"/>-->
+
+<!--                </sheet>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
+
+
+
+<!--    ACTIONS-->
+<!--    <record id="action_demo_form" model="ir.actions.act_window">-->
+<!--            <field name="name">Demo Action </field>-->
+<!--            <field name="res_model">demo.model</field>-->
+
+<!--            <field name="view_type">form</field>-->
+<!--            <field name="view_mode">form</field>-->
+
+<!--            <field name="help" type="html">-->
+<!--              <p class="o_view_nocontent_smiling_face">-->
+<!--                Create a new incoterm-->
+<!--              </p><p>-->
+<!--                Incoterms are used to divide transaction costs and responsibilities between buyer and seller.-->
+<!--              </p>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+    <record id="action_demo_form" model="ir.actions.act_window">
+            <field name="name">Demo Navbar</field>
+<!--            <field name="type">ir.actions.act_window</field>-->
+            <field name="res_model">demo.model</field>
+            <field name="view_mode">tree,form</field>
+<!--            <field name="search_view_id" ref="view_account_move_filter"/>-->
+        </record>
+
+
+    <menuitem id="demo_root" name="Demo Root" sequence="0"/>
+    <menuitem id="demo_details" name="Details" parent="demo_root" action="action_demo_form"/>
+
+
+
+
+<!--&lt;!&ndash;    SHOW ACTIONS&ndash;&gt;-->
+
+<!--&lt;!&ndash;    NAVBAR SHOW (GRAND PARENT)&ndash;&gt;-->
+<!--    <menuitem name="Demo Navbar"-->
+<!--        id="demo_navbar_action"/>-->
+
+<!--&lt;!&ndash;SIDEBAR SHOW (PARENT)&ndash;&gt;-->
+<!--    <menuitem name="Demo Form Show"-->
+<!--        id="demo_sidebar_action" parent="demo_navbar_action"-->
+<!--        action="action_demo_form"/>-->
+</odoo>
